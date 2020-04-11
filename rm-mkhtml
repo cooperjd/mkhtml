@@ -2,8 +2,8 @@
 
 echo "Beginning unininstall for mkhtml"
 rm -R /var/lib/mkhtml
-rm /usr/bin/mkhtml
-rm /usr/bin/rm-mkhtml
+rm /usr/local/bin/mkhtml
+rm /usr/local/bin/rm-mkhtml
 echo "finished uninstalling mkhtml"
 exit 0
 

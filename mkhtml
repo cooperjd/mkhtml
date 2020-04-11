@@ -3,26 +3,27 @@
 templateLoc=/var/lib/mkhtml/templates
 fileExt=.html
 isInstalled=true
+addTemplate="addtemplate"
 
 #Check if mkhtml is installed
-if [ -f "/var/lib/mkhtml" ]; then
+if [ -d "/var/lib/mkhtml" ]; then
 	continue
 else
 	echo "mkhtml is not installed properly. Please reinstall"
 	exit 1
 fi
 
-if [ -f "$templateLoc" ]; then
+if [ -d "$templateLoc" ]; then
 	continue
 else
-	echo "mkhtml is not installed properly. Please reinstall"
+	echo "templates are not installed properly. Please reinstall"
 	exit 1
 fi
 
 #Check for addtemplate
-if [ "$1" == "addtemplate"]; then
+if [ "$1" = "$addTemplate" ]; then
         if [ -f "$2" ]; then
-                cp $2 templateLoc
+                cp $2 $templateLoc
 		echo "successfully added $2 to templates"
 		exit 0
 	else
@@ -36,7 +37,6 @@ template=$templateLoc/$1
 file=$2$fileExt
 
 if [ -f "$template" ]; then
-	echo "$file exists"
 	touch $file
 	cat $template > $file
 	exit 0

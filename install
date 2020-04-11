@@ -2,10 +2,10 @@
 removeFile=rm-mkhtml
 
 echo "Beginning Install for mkhtml..."
-mkdir -v /var/lib/mkhtml
-cp -v -R ./var-files/* /var/lib/mkhtml
-cp -v ./mkhtml /usr/bin
-cp -v ./$removeFile /usr/bin
+mkdir -v /var/local/mkhtml
+cp -v -R ./var-files/* /var/local/mkhtml
+cp -v ./mkhtml /usr/local/bin
+cp -v ./$removeFile /usr/local/bin
 echo "Finished Installing mkhtml"
 echo "Remove mkhtml by running '$removeFile'"
 exit 0
