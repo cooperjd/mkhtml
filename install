@@ -1,0 +1,11 @@
+#! /bin/sh
+removeFile=rm-mkhtml
+
+echo "Beginning Install for mkhtml..."
+mkdir -v /var/lib/mkhtml
+cp -v -R ./var-files/* /var/lib/mkhtml
+cp -v ./mkhtml /usr/bin
+cp -v ./$removeFile /usr/bin
+echo "Finished Installing mkhtml"
+echo "Remove mkhtml by running '$removeFile'"
+exit 0

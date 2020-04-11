@@ -1,0 +1,48 @@
+#! /bin/sh
+
+templateLoc=/var/lib/mkhtml/templates
+fileExt=.html
+isInstalled=true
+
+#Check if mkhtml is installed
+if [ -f "/var/lib/mkhtml" ]; then
+	continue
+else
+	echo "mkhtml is not installed properly. Please reinstall"
+	exit 1
+fi
+
+if [ -f "$templateLoc" ]; then
+	continue
+else
+	echo "mkhtml is not installed properly. Please reinstall"
+	exit 1
+fi
+
+#Check for addtemplate
+if [ "$1" == "addtemplate"]; then
+        if [ -f "$2" ]; then
+                cp $2 templateLoc
+		echo "successfully added $2 to templates"
+		exit 0
+	else
+		echo "file $2 does not exist"
+		exit 1
+	fi
+fi
+
+#Check for file creation
+template=$templateLoc/$1
+file=$2$fileExt
+
+if [ -f "$template" ]; then
+	echo "$file exists"
+	touch $file
+	cat $template > $file
+	exit 0
+else
+	echo "Template '$1' does not exist in location '$templateLoc'"
+	exit 1
+fi
+
+exit 0
