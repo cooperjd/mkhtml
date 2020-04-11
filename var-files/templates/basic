@@ -4,14 +4,18 @@
 <head>
   <meta charset="utf-8">
 
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+  <title>FCV Basic Template</title>
+  <meta name="description" content="mkhtml HTML file">
+  <meta name="author" content="mkhtml dev">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
+  <div style="width: 50%; margin: auto;">
+  	<h1 style="color: red; width: 50%; margin: auto;">FCV Basic Template</h1>
+  	<p style="width: 50%; margin: auto;">This is a basic html template created by mkhtml</p>
+  </div>	
   <script src="js/scripts.js"></script>
 </body>
