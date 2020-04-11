@@ -1,4 +1,4 @@
-# mkhtml
+# mkhtml program
 
 Purpose:
   Set up html templates and create new html files based off of the templates
